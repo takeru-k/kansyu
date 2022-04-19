@@ -1,0 +1,173 @@
+/*================================
+	header
+=================================*/
+.header{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background: #000;
+
+	@include mq('lg'){
+		height: 100px;
+	}
+}
+
+.header__inner{
+  padding: 8px 16px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header__logo{
+  width: 160px;
+  font-size: 1rem;
+	color: #fff;
+}
+
+/* ハンバーガーメニュー */
+.menu-btn {
+	position: absolute;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ハンバーガーメニューの基準線 */
+.btn-line {
+	display: block;
+	position: relative;
+	width: 24px;
+	height: 3px;
+	background-color: #000;
+	transition: .2s;
+	margin: 0 auto;
+}
+
+/* ハンバーガーメニューの上下線 */
+.btn-line::before , .btn-line::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: #000;
+	transition: .5s;
+	left: 0;
+}
+
+.btn-line::before {
+	transform: translateY(-10px);/* 上の線の位置 */
+}
+
+.btn-line::after {
+	transform: translateY(10px);/* 下の線の位置 */
+}
+
+
+/* メニューオープン時 */
+.btn-line.open {
+	background-color: transparent;/* 真ん中の線を透明に */
+}
+
+.btn-line.open::before , .btn-line.open::after {
+	content: "";
+	background-color: #000;
+	transition: .2s;
+}
+
+.btn-line.open::before {
+	transform: rotate(45deg);	/* 上の線を傾ける */
+}
+
+.btn-line.open::after {
+	transform: rotate(-45deg);/* したの線を傾ける */
+}
+
+/* メニューのスタイリング */
+.header__menu {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: -70%;/* メニューの位置マイナス指定で画面外に */
+	width: 70%;
+	background-color: #000;
+	color: #fff;
+	transition: .3s;
+  z-index: 100;
+
+  li{
+    display: flex;
+    align-items: center;
+    padding: 32px 24px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+		font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+		letter-spacing: .1em;
+		font-size: 14px;
+  }
+
+	a{
+		&:hover{
+			color: $color-main;
+		}
+	}
+}
+
+.header__menu.open {
+	position: absolute;
+	right: 0;/* メニューオープン時位置0にして画面内に */
+  z-index: 100;
+  top: 60px;
+}
+
+/* スマホはボタンを非表示 */
+.header__links{
+	display: none;
+}
+
+/* 1024px以上のスタイリング */
+@include mq('lg'){
+  .menu-btn {
+		display: none;
+	}
+
+	.header{
+		background: none;
+	}
+
+	.header__menu {
+		/* メニューを横に */
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row;
+		background: none;
+		margin-bottom: 24px;
+		position: absolute;
+		top: 1px;
+		right: 20px;
+
+		
+		li{
+			color: #fff;
+			padding: 16px;
+			border-bottom: none;
+			height: 100px;
+		}
+	}
+}
+
+/* スクロールしたらヘッダーメニューのフォントカラー変更 */
+.header.headerColorScroll {
+  background: #000;
+  transition: 0.4s ease-out;
+}

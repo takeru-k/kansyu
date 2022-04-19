@@ -1,0 +1,40 @@
+.c-table{
+  width: 100%;
+  tr{
+    border-bottom: 1px solid #b5b1b1;
+    width: 100%;
+  }
+
+  th, td{
+    
+  border: none;
+  }
+
+  th{
+    width: 30%;
+    text-align: left;
+    padding: 24px 0;
+  }
+
+  td{
+    padding: 24px 0;
+    
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .c-table{
+    th, td{
+      width: 100%;
+    display: block;
+    }
+
+    th{
+width: 100%;
+    }
+
+    td{
+padding-top: 0;
+    }
+  }
+}

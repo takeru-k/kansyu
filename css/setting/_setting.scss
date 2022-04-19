@@ -1,0 +1,136 @@
+/*================================
+	ブレイクポイント
+=================================*/
+
+$breakpoints: (
+  'sm': (min-width: 640px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 1024px),
+  'xl': (min-width: 1280px)
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: xl) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*================================
+	色設定
+=================================*/
+$color-main: #46a68b;
+$color-sub: #f0f9f7;
+$color-accent: #46c4db;
+$color-button: #337ab7;
+
+/*================================
+	全体共通
+=================================*/
+body{
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 2;
+}
+
+a{
+  color: inherit;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+
+img{
+  object-fit: cover;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクの形状*/
+#page-top a{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase; 
+  text-decoration: none;
+  font-size:0.6rem;
+  transition:all 0.3s;
+}
+
+#page-top a:hover{
+  background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom:30px;
+  z-index: 2;
+    /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(100px);
+  }
+}

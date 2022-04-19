@@ -1,0 +1,58 @@
+.footer{
+  position: relative;
+  z-index: 2;
+}
+.footer__inner{
+  padding: 24px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.footer__logo{
+  img{
+    margin: 0 auto;
+  }
+}
+
+.footer__address{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.footer__nav{
+  border-top: 1px solid #000;
+  text-transform: uppercase;
+  padding-top: 24px;
+
+  li{
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+}
+
+.footer__copy{
+  text-align: center;
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  padding: 16px 0;
+}
+
+@include mq('md'){
+  .footer__address{
+    text-align: center;
+  }
+
+  .footer__nav{
+    
+    ul{
+      display: flex;
+      justify-content: space-between;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    li{
+      margin-bottom: 0;
+    }
+  }
+}
