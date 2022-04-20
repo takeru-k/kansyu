@@ -17,12 +17,22 @@
   padding: 8px 16px;
 	margin: 0 auto;
 	position: relative;
+	height: 60px;
+
+	@include mq('lg'){
+		height: 100px;
+	}
 }
 
 .header__logo{
   width: 160px;
-  font-size: 1rem;
-	color: #fff;
+  position: absolute;
+	top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+	@include mq('lg'){
+		width: 200px;
+	}
 }
 
 /* ハンバーガーメニュー */

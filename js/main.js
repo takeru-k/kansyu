@@ -7,7 +7,7 @@ $(function () {
 // ページ内スクロール
 $('#navigation a[href*="#"]').click(function () {
   var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
-  var pos = $(elmHash).offset().top;  //idの上部の距離を取得
+  var pos = $(elmHash).offset().top-140;  //idの上部の距離を取得
   $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
   return false;
 });
@@ -78,3 +78,22 @@ $('#page-top').click(function () {
     }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
     return false;//リンク自体の無効化
 });
+
+
+
+var windowWidth = $(window).width();
+var windowSm = 768;
+if (windowWidth <= windowSm) {
+//横幅768px以下（スマホ）に適用させるJavaScriptを記述
+$('#navigation a[href]').on('click', function(event) {
+    $('.menu-btn').trigger('click');
+});
+
+// ページ内スクロール
+$('#navigation a[href*="#"]').click(function () {
+  var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+  var pos = $(elmHash).offset().top-70;  //idの上部の距離を取得
+  $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+  return false;
+});
+} 

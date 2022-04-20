@@ -152,20 +152,8 @@ input[type="checkbox"]:checked + span:after {
   text-align: center;
   line-height: 1.4;
   position: relative;
-  padding-right: 48px;
   text-decoration: none;
   transition: .3s;
-
-  &:before{
-    content: "";
-    width: 16px;
-    height: 16px;
-    background: url(../images/arrow-menu.svg) no-repeat;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 
   &:hover{
     opacity: .8;
