@@ -26,50 +26,43 @@
 
 @media not all and (min-width: 1024px){
   .table-contact{
-  width: 100%;
-  padding-top: 24px;
-  border-bottom: 1px dashed #e5e5e5;  
-
-  tr{
-    border-top: 1px dashed #e5e5e5;
-    height: auto;
-  }
-
-  th{
-    display: block;
-    text-align: left;
-    padding-top: 20px;
-  }
-
-  td{
-    display: block;
-    padding: 10px 0 20px;
-  }
-
-  input, textarea{
     width: 100%;
-    padding: 10px 20px;
-    background: #fff;
-    border: 1px solid #aaaaaa;
+    padding-top: 24px;
+    border-bottom: 1px dashed #e5e5e5;  
+
+    tr{
+      border-top: 1px dashed #e5e5e5;
+      height: auto;
+    }
+
+    th{
+      display: block;
+      text-align: left;
+      padding-top: 20px;
+    }
+
+    td{
+      display: block;
+      padding: 10px 0 20px;
+    }
+
+    input, textarea{
+      width: 100%;
+      padding: 10px 20px;
+      background: #fff;
+      border: 1px solid #aaaaaa;
+    }
   }
-}
 }
 
 
 .input-field{
- 
+
   label{
     margin: 5px 0;
     display: block;
 
   }
-}
-
-@include mq('lg'){
-  .td__flex{
-    display: flex;
-    justify-content: space-between;
-}
 }
 
 .require {
@@ -158,56 +151,6 @@ input[type="checkbox"]:checked + span:after {
   &:hover{
     opacity: .8;
     text-decoration: underline;
-  }
-}
-
-.table__wrapper{
-  margin-top: 24px;
-}
-
-.table{
-  border-collapse: collapse;
-
-  tr{
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    th{
-      text-align: left;
-      width: 200px;
-    }
-}
-
-
-@media not all and (min-width: 1024px){
-
-
-  .table{
-  
-    th{
-      display: block;
-      padding-top: 16px;
-    }
-
-    td{
-      display: block;
-      padding-bottom: 8px;
-    }
-  }
-}
-
-@include mq('md'){
-  .table{
-    margin: 0 auto;
-
-    th{
-      padding: 24px;
-      border-bottom: 1px solid #1a0dab;
-    }
-
-    td{
-      padding: 24px;
-    }
   }
 }
 

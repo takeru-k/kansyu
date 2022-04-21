@@ -140,11 +140,6 @@
   top: 60px;
 }
 
-/* スマホはボタンを非表示 */
-.header__links{
-	display: none;
-}
-
 /* 1024px以上のスタイリング */
 @include mq('lg'){
   .menu-btn {

@@ -410,11 +410,6 @@ table {
   top: 60px;
 }
 
-/* スマホはボタンを非表示 */
-.header__links {
-  display: none;
-}
-
 /* 1024px以上のスタイリング */
 @media (min-width: 1024px) {
   .menu-btn {
@@ -692,18 +687,16 @@ table {
   width: 100%;
 }
 
-.c-table th, .c-table td {
-  border: none;
-}
-
 .c-table th {
   width: 30%;
   text-align: left;
   padding: 24px 0;
+  border: none;
 }
 
 .c-table td {
   padding: 24px 0;
+  border: none;
 }
 
 @media only screen and (max-width: 480px) {
@@ -775,17 +768,6 @@ table {
 .input-field label {
   margin: 5px 0;
   display: block;
-}
-
-@media (min-width: 1024px) {
-  .td__flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
 }
 
 .require {
@@ -883,47 +865,6 @@ input[type="checkbox"]:checked + span:after {
   text-decoration: underline;
 }
 
-.table__wrapper {
-  margin-top: 24px;
-}
-
-.table {
-  border-collapse: collapse;
-}
-
-.table tr {
-  border-bottom: 1px solid #eaeaea;
-}
-
-.table th {
-  text-align: left;
-  width: 200px;
-}
-
-@media not all and (min-width: 1024px) {
-  .table th {
-    display: block;
-    padding-top: 16px;
-  }
-  .table td {
-    display: block;
-    padding-bottom: 8px;
-  }
-}
-
-@media (min-width: 768px) {
-  .table {
-    margin: 0 auto;
-  }
-  .table th {
-    padding: 24px;
-    border-bottom: 1px solid #1a0dab;
-  }
-  .table td {
-    padding: 24px;
-  }
-}
-
 .btn__container {
   padding-top: 24px;
   text-align: center;
@@ -989,7 +930,7 @@ input[type="checkbox"]:checked + span:after {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   z-index: 3;
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.3) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
   background-size: 2px 2px;

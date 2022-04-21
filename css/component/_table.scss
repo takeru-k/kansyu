@@ -1,24 +1,21 @@
 .c-table{
   width: 100%;
+
   tr{
     border-bottom: 1px solid #b5b1b1;
     width: 100%;
-  }
-
-  th, td{
-    
-  border: none;
   }
 
   th{
     width: 30%;
     text-align: left;
     padding: 24px 0;
+    border: none;
   }
 
   td{
     padding: 24px 0;
-    
+    border: none;
   }
 }
 
@@ -26,15 +23,15 @@
   .c-table{
     th, td{
       width: 100%;
-    display: block;
+      display: block;
     }
 
     th{
-width: 100%;
+      width: 100%;
     }
 
     td{
-padding-top: 0;
+      padding-top: 0;
     }
   }
 }
